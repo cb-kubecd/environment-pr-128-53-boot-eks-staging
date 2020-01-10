@@ -1,0 +1,39 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-128-53-vnwgl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-zk4l9[0m
+{"level":"warn","ts":1578670815.8701057,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578670815.8703747,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-128-53-vnwgl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-j2ppv[0m
+{"level":"warn","ts":1578670817.1384177,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1578670817.139698,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-environment-pr-128-53-vnwgl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-128-53-vnwgl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-128-53-ftrv2[0m
+{"level":"warn","ts":1578670822.3212306,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578670822.5149314,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-128-53-boot-eks-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-128-53-vnwgl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d9cedb38a8aee68e2bcb1f49a1f44bd61bd0f3fe,4:015708c09120fd4d4f18bece5f0cec8c589d2569
+DEBUG: ran git fetch --unshallow origin 015708c09120fd4d4f18bece5f0cec8c589d2569: d9cedb38a8aee68e2bcb1f49a1f44bd61bd0f3fe: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard d9cedb38a8aee68e2bcb1f49a1f44bd61bd0f3fe in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 015708c09120fd4d4f18bece5f0cec8c589d2569 in 
+Merged SHA 015708c09120fd4d4f18bece5f0cec8c589d2569 with commit message 'chore: Promote bdd-nh-1578669405 to version 0.0.1' into base branch master
+
+Showing logs for build [32mcb-kubecd-environment-pr-128-53-vnwgl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
